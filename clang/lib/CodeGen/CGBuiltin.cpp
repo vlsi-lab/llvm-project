@@ -23233,6 +23233,71 @@ Value *CodeGenFunction::EmitRISCVBuiltinExpr(unsigned BuiltinID,
   case RISCV::BI__builtin_riscv_cv_alu_subuRN:
     ID = Intrinsic::riscv_cv_alu_subuRN;
     break;
+  
+  // CORDIC intrinsics
+  case RISCV::BI__builtin_riscv_sin_q:
+    ID = Intrinsic::riscv_sin_q;
+    break;
+  case RISCV::BI__builtin_riscv_cos_q:
+    ID = Intrinsic::riscv_cos_q;
+    break;
+  case RISCV::BI__builtin_riscv_atan_q:
+    ID = Intrinsic::riscv_atan_q;
+    break;
+  case RISCV::BI__builtin_riscv_asin_q:
+    ID = Intrinsic::riscv_asin_q;
+    break;
+  case RISCV::BI__builtin_riscv_acos_q:
+    ID = Intrinsic::riscv_acos_q;
+    break;
+  case RISCV::BI__builtin_riscv_exp_q:
+    ID = Intrinsic::riscv_exp_q;
+    break;
+  case RISCV::BI__builtin_riscv_atan2_q:
+    ID = Intrinsic::riscv_atan2_q;
+    break;
+  case RISCV::BI__builtin_riscv_logn_q:
+    ID = Intrinsic::riscv_logn_q;
+    break;
+  case RISCV::BI__builtin_riscv_sqrt_q:
+    ID = Intrinsic::riscv_sqrt_q;
+    break;
+  case RISCV::BI__builtin_riscv_hypotenuse_q:
+    ID = Intrinsic::riscv_hypotenuse_q;
+    break;
+
+    // CORDIC intrinsics
+  case RISCV::BI__builtin_riscv_sin_f:
+    ID = Intrinsic::riscv_sin_f;
+    break;
+  case RISCV::BI__builtin_riscv_cos_f:
+    ID = Intrinsic::riscv_cos_f;
+    break;
+  case RISCV::BI__builtin_riscv_atan_f:
+    ID = Intrinsic::riscv_atan_f;
+    break;
+  case RISCV::BI__builtin_riscv_asin_f:
+    ID = Intrinsic::riscv_asin_f;
+    break;
+  case RISCV::BI__builtin_riscv_acos_f:
+    ID = Intrinsic::riscv_acos_f;
+    break;
+  case RISCV::BI__builtin_riscv_exp_f:
+    ID = Intrinsic::riscv_exp_f;
+    break;
+  case RISCV::BI__builtin_riscv_atan2_f:
+    ID = Intrinsic::riscv_atan2_f;
+    break;
+  case RISCV::BI__builtin_riscv_logn_f:
+    ID = Intrinsic::riscv_logn_f;
+    break;
+  case RISCV::BI__builtin_riscv_sqrt_f:
+    ID = Intrinsic::riscv_sqrt_f;
+    break;
+  case RISCV::BI__builtin_riscv_hypotenuse_f:
+    ID = Intrinsic::riscv_hypotenuse_f;
+    break;
+
 
     // Vector builtins are handled from here.
 #include "clang/Basic/riscv_vector_builtin_cg.inc"
