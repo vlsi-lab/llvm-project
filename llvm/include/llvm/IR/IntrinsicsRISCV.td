@@ -1878,6 +1878,49 @@ let TargetPrefix = "riscv" in {
   def int_riscv_vsm3me   : RISCVBinaryAAXUnMasked;
 } // TargetPrefix = "riscv"
 
+class Cordic_q
+    : Intrinsic<[llvm_i32_ty], [llvm_i32_ty],
+                [IntrNoMem, IntrWillReturn, IntrSpeculatable]>;
+
+class Cordic_q_q
+    : Intrinsic<[llvm_i32_ty], [llvm_i32_ty, llvm_i32_ty],
+                [IntrNoMem, IntrWillReturn, IntrSpeculatable]>;
+
+class Cordic_f
+    : Intrinsic<[llvm_float_ty], [llvm_float_ty],
+                [IntrNoMem, IntrWillReturn, IntrSpeculatable]>;
+
+class Cordic_f_f
+    : Intrinsic<[llvm_float_ty], [llvm_float_ty, llvm_float_ty],
+                [IntrNoMem, IntrWillReturn, IntrSpeculatable]>;
+
+let TargetPrefix = "riscv" in {
+
+  def int_riscv_sin_q : Cordic_q;
+  def int_riscv_cos_q : Cordic_q;
+  def int_riscv_atan_q : Cordic_q;
+  def int_riscv_asin_q : Cordic_q;
+  def int_riscv_acos_q : Cordic_q;
+  def int_riscv_exp_q : Cordic_q;
+  def int_riscv_atan2_q : Cordic_q_q;
+  def int_riscv_logn_q : Cordic_q;
+  def int_riscv_sqrt_q : Cordic_q;
+  def int_riscv_hypotenuse_q : Cordic_q_q;
+
+  def int_riscv_sin_f : Cordic_f;
+  def int_riscv_cos_f : Cordic_f;
+  def int_riscv_atan_f : Cordic_f;
+  def int_riscv_asin_f : Cordic_f;
+  def int_riscv_acos_f : Cordic_f;
+  def int_riscv_exp_f : Cordic_f;
+  def int_riscv_atan2_f : Cordic_f_f;
+  def int_riscv_logn_f : Cordic_f;
+  def int_riscv_sqrt_f : Cordic_f;
+  def int_riscv_hypotenuse_f : Cordic_f_f;
+
+
+}
+
 // Vendor extensions
 //===----------------------------------------------------------------------===//
 include "llvm/IR/IntrinsicsRISCVXTHead.td"
