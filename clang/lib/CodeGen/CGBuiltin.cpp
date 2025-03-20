@@ -23244,6 +23244,9 @@ Value *CodeGenFunction::EmitRISCVBuiltinExpr(unsigned BuiltinID,
   case RISCV::BI__builtin_riscv_atan_q:
     ID = Intrinsic::riscv_atan_q;
     break;
+  case RISCV::BI__builtin_riscv_atanh_q:
+    ID = Intrinsic::riscv_atanh_q;
+    break;
   case RISCV::BI__builtin_riscv_asin_q:
     ID = Intrinsic::riscv_asin_q;
     break;
@@ -23275,6 +23278,9 @@ Value *CodeGenFunction::EmitRISCVBuiltinExpr(unsigned BuiltinID,
     break;
   case RISCV::BI__builtin_riscv_atan_f:
     ID = Intrinsic::riscv_atan_f;
+    break;
+  case RISCV::BI__builtin_riscv_atanh_f:
+    ID = Intrinsic::riscv_atanh_f;
     break;
   case RISCV::BI__builtin_riscv_asin_f:
     ID = Intrinsic::riscv_asin_f;

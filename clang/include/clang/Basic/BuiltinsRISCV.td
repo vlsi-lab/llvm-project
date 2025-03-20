@@ -153,6 +153,7 @@ def ntl_store : RISCVBuiltin<"void(...)">;
 def sin_q        : RISCVBuiltin<"int32_t(int32_t)">;
 def cos_q        : RISCVBuiltin<"int32_t(int32_t)">;
 def atan_q       : RISCVBuiltin<"int32_t(int32_t)">;
+def atanh_q      : RISCVBuiltin<"int32_t(int32_t)">;
 def asin_q       : RISCVBuiltin<"int32_t(int32_t)">;
 def acos_q       : RISCVBuiltin<"int32_t(int32_t)">;
 def exp_q        : RISCVBuiltin<"int32_t(int32_t)">;
@@ -160,10 +161,13 @@ def atan2_q      : RISCVBuiltin<"int32_t(int32_t, int32_t)">;
 def logn_q       : RISCVBuiltin<"int32_t(int32_t)">;
 def sqrt_q       : RISCVBuiltin<"int32_t(int32_t)">;
 def hypotenuse_q : RISCVBuiltin<"int32_t(int32_t, int32_t)">;
+def div_q        : RISCVBuiltin<"int32_t(int32_t)">;
+def sincos_q     : RISCVBuiltin<"int32_t(int32_t, int32_t)">;
 
 def sin_f        : RISCVBuiltin<"float(float)">;
 def cos_f        : RISCVBuiltin<"float(float)">;
 def atan_f       : RISCVBuiltin<"float(float)">;
+def atanh_f      : RISCVBuiltin<"float(float)">;
 def asin_f       : RISCVBuiltin<"float(float)">;
 def acos_f       : RISCVBuiltin<"float(float)">;
 def exp_f        : RISCVBuiltin<"float(float)">;
@@ -171,6 +175,8 @@ def atan2_f      : RISCVBuiltin<"float(float, float)">;
 def logn_f       : RISCVBuiltin<"float(float)">;
 def sqrt_f       : RISCVBuiltin<"float(float)">;
 def hypotenuse_f : RISCVBuiltin<"float(float, float)">;
+def div_f        : RISCVBuiltin<"float(float)">;
+def sincos_f     : RISCVBuiltin<"float(float, float)">;
 
 //===----------------------------------------------------------------------===//
 // XCV extensions.
